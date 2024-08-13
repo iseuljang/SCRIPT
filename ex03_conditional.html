@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트의 조건문</title>
+</head>
+<body>
+    <script>
+        // if | if(조건문){} else{} | if(조건문){} else if(조건문){}
+        // switch case
+        // 사용자 인터렉티브
+        // alert("메세지"); 경고창 띄우기
+        //alert("경고창");
+        // 사용자에게 입력값 받기
+        /*
+        let msg = prompt("숫자를 입력하세요");
+        alert(msg);
+        */
+        //let str = parseInt(prompt("숫자를 입력하세요"));
+        /*
+        if(isNaN(str)){
+            alert("숫자가 아닙니다");
+        }else{
+            //alert("숫자를 입력하셨습니다 \n 입력한 숫자: "+ str);
+            // str 이 음수인지 0인지 양수인지에 따라 출력
+            if(str > 0){
+                alert("양수입니다 \n 입력한 숫자 : " + str);
+            }else if(str < 0) {
+                alert("음수입니다 \n 입력한 숫자 : " + str);
+            }else{
+                alert("0 입니다");
+            }
+        }
+        */
+        /*
+        if(isNaN(str)){
+            alert("숫자가 아닙니다");
+        }else{
+            if(str > 100 || str < 0){
+                alert("0~100 사이의 숫자를 입력해주세요\n입력한 숫자: " + str);
+            }else{
+                if(str >= 60){
+                    alert("합격");
+                }else{
+                    alert("불합격");
+                }
+            }
+        }
+        */
+        //switch case
+        /*
+        switch(변수){
+        case 변수의 값 : 
+            실행할 코드;
+            break;
+        case 변수의 값 : 
+            실행할 코드;
+            break;
+        default : 
+            실행할 코드;
+        }
+        */
+        /*
+        let str = prompt("성별을 입력하세요[M/F]");
+        switch(str){
+            case "M" :
+            case "m" :
+                alert("남성입니다");
+                break;
+            case "F" :
+            case "f" :
+                alert("여성입니다");
+                break;
+            default :
+                alert("잘못입력하셨습니다");
+        }
+        */
+        let str = parseInt(prompt("숫자를 입력하세요"));
+        switch(str / 10){
+            case 9 : alert("A"); break;
+            case 8 : alert("B"); break;
+            case 7 : alert("C"); break;
+            case 6 : alert("D"); break;
+            default : alert("낙제");
+        }
+    </script>
+</body>
+</html>

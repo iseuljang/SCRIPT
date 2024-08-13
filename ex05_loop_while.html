@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 반복문</title>
+</head>
+<body>
+    <script>
+        /*
+        초기조건;
+        while(반복을 지속하는 조건문(종료조건)){
+            실행할 코드;
+            조건을 변경하는 코드;
+        }
+        */
+        let result = 0;
+        let number = 1;
+        // 1~10까지 모든 숫자를 더해서 result에 넣으세요
+        while(number <= 10){
+            result += number++;
+        }
+        console.log(result);
+        /*
+        do while : 일단 첫번째 실행이 동작됨
+        do{
+            실행할 코드;
+            조건을 변경하는 코드;
+        }while(조건문);
+        */
+        number = 1;
+        result = 0;
+        do{
+            console.log("result에 number를 더합니다")
+            result += number++;
+        }while(number <= 10);
+        console.log(result);
+        /*
+        반복문의 제어 :: break; continue;
+        */
+        number = 1;
+        while(true){
+            console.log("number: "+number);
+            if(number % 2 == 0){
+                console.log(number + "는 짝수입니다");
+                number++;
+                continue; //아래 코드를 실행하지 않고 다음 반복으로 건너뜀
+            }
+            if(number > 10){
+                break; //반복문에서 break;문을 만나면 반복을 중단
+            }
+            console.log("while문이 동작중입니다")
+            number++;
+        }
+    </script>
+</body>
+</html>

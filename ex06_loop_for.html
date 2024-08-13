@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 for문</title>
+</head>
+<body>
+    <script>
+        let result = 0;
+        /*
+        일반적인 for문
+        for(let num = 0; num < 10; num++){
+            실행할 코드;
+        }
+        */
+        for(let num = 0; num < 10; num++){
+            console.log("num: " + num);
+            result += num;
+        }
+        console.log("result: " + result);
+        // 자바의 향상된 for문과 같은 구조
+        let list = [1,2,3,4,5,6,7,8,9,10]; //자바스크립트 배열
+        for(let item of list){
+            console.log("item: " +item);
+        }
+        //for(인덱스 in 배열){}
+        for(let idx in list){
+            console.log("idx: " +idx + ", 원소: " +list[idx]);
+            //배열에서 인덱스를 사용하여 원소를 호출 => 배열이름[인덱스]
+        }
+        // 배열.forEach()
+    </script>
+</body>
+</html>
