@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트의 함수</title>
+</head>
+<body>
+    <script>
+        /*
+        y = f(x)
+        함수의 선언
+        선언키워드 함수이름(인자[,인자...]){
+            비지니스 로직;
+            결과값의 반환;
+        }
+        함수의 호출
+        반환값을 저장할 변수 = 함수이름(입력값[,입력값...]);
+        */
+        function add(x,y){
+            return x + y;
+        }
+        let result = add(10,5);
+        console.log(result);
+        console.log("add : "+add(12,24));
+        function minus(x,y) {
+            return x - y;
+        }
+        function mul(x,y){
+            return x*y;
+        }
+        function div(x,y){
+            return x / y;
+        }
+        console.log("minus : "+minus(10,5));
+        console.log("mul : "+mul(10,5));
+        console.log("div : "+div(10,5));
+        //=====================================================
+        let a = parseInt(prompt("숫자 a를 입력하세요"));
+        let op = prompt("연산자를 입력하세요[+ - * /]");
+        let b = parseInt(prompt("숫자 b를 입력하세요"));
+        result = 0;
+        switch(op){
+            case "+" : result = add(a,b); break;
+            case "-" : result = minus(a,b); break;
+            case "*" : result = mul(a,b); break;
+            case "/" : 
+                if(b != 0){
+                    result = div(a,b); break;
+                }else{
+                    alert("0은 나눌수없습니다"); break;
+                }
+            default: console.log("연산자를 잘못입력하셨습니다.");
+        }
+        alert("계산결과 : " + result);
+    </script>
+</body>
+</html>

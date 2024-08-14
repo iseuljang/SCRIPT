@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forEach</title>
+</head>
+<body>
+    <script>
+        let list = ["홍길동","성춘향","전우치","임꺽정","이순신"];
+        //forEach는 원소가 여러개인 객체에서 각 원소에 대해 
+        //특정한 함수를 실행하고 싶을때 사용
+        //객체.forEach();
+        //function 함수이름(인자){코드}
+        //객체.forEach(function (인자){코드});
+        list.forEach(function(num){
+            console.log(num);
+        });
+        //익명함수를 간략화 -> 람다식 :: 화살표 함수
+        list.forEach((num)=>{console.log(num)});
+    </script>
+</body>
+</html>
