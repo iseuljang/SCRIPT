@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트의 String 객체</title>
+</head>
+<body>
+    <script>
+        let str = new String("Hello Javascript");
+        //문자열에서 인덱스로 문자를 반환(길이가 1인 문자열)
+        console.log(str.charAt(6));
+        // 문자열에서 인덱스로 찾은 문자의 유니코드를 반환
+        console.log(str.charCodeAt(6));
+        // concat 문자열을 합침
+        console.log(str.concat("자바스크립트 객체"));
+        // indexOf(문자열)
+        console.log(str.indexOf("Java")); //6
+        console.log(str.indexOf("java")); //-1
+        //replace(찾을문자열,바꿀문자열)
+        console.log(str.replace("script","SCRIPT"));
+        //slice(인덱스a[,인덱스b])
+        //문자열에서 인덱스 a 에서 끝까지(인덱스 b - 1) 잘라서 반환
+        console.log(str.slice(6,10)); //Java
+        console.log(str.slice(6));    //Javascript
+        //split
+        str = "홍길동:전우치:임꺽정:성춘향";
+        console.log(str.split(":"));
+        // substr(인덱스a[,길이])
+        console.log(str.substr(12));
+        console.log(str.substr(8,3));
+        // substring(인덱스a[,인덱스b]) : 인덱스 a~인덱스 b-1까지의 문자열을 반환
+        console.log(str.substring(4,11));
+        console.log(str.substring(4));
+        // trim() 문자열 앞 뒤의 공백 문자들을 제거
+        str = " Hello,  java & script  ";
+        console.log(str.trim());
+        //대문자,소문자로 바꾸기
+        //메소드를 호출한 결과가 여전히 문자열이면 
+        //String 객체가 제공하는 메소드를 이어서 호출할수 있음
+        console.log(str.trim().toUpperCase(str));
+        console.log(str.trim().toLowerCase(str));
+        //문자코드로부터 문자열 반환
+        console.log(String.fromCharCode(74));
+    </script>
+</body>
+</html>

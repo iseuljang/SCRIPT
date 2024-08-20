@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트의 객체</title>
+</head>
+<body>
+    <script>
+        //자바스크립트의 객체는 {키 : 값, 키 : 값} 으로 구성됨
+        //값에는 데이터(리터럴)과 함수가 올 수 있음
+        //값이 리터럴인 키는 속성(프로퍼티)
+        //값이 함수인 키는 메소드
+        var hong = {
+            name : "홍길동",
+            age : 30,
+            addr : "경기도",
+            info : function(){
+                console.log("이름 : " + this.name);
+                console.log("나이 : " + this.age);
+                console.log("주소 : " + this.addr);
+            }
+        }
+        console.log(hong);
+        console.log(hong.name);
+        console.log(hong.age);
+        console.log(hong.addr);
+        hong.info(); //메소드를 호출할 때는 메소드 이름 다음에 () 작성
+        console.log(hong.info); //console.log(hong.info()); => undefined return 이 없기 때문!
+        
+    </script>
+</body>
+</html>

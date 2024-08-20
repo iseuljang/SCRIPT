@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트의 기본 객체</title>
+</head>
+<body>
+    <script>
+        let date = new Date();
+        console.log(date);
+        console.log(date.getDay());
+        console.log(date.getMonth() + 1); //달은 0부터 시작이어서 +1 해줘야 함
+        console.log(date.toLocaleString());
+        let str = new String("Hello");
+        console.log(str);
+        let msg = "Hello";
+        console.log(msg);
+        //Date 실습
+        console.log("현재시간 : " + date.toUTCString());
+        console.log("연도 : " + date.getFullYear());
+        console.log("월 : " + (date.getMonth() + 1));
+        console.log("일 : " + date.getDate());
+        console.log("시 : " + date.getHours());
+        console.log("분 : " + date.getMinutes());
+        console.log("초 : " + date.getSeconds());
+        console.log("밀리초 : " + date.getMilliseconds());
+        var day = new Date(2024,7,20,10,40,0);
+        console.log(day.toLocaleString());
+    </script>
+</body>
+</html>

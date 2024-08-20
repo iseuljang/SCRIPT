@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 외부파일로 연결하기</title>
+    <script src="ex11_outfile.js"></script>
+</head>
+<body>
+    <script>
+        /*
+        외부 파일에 선언된 DoCal() 함수를 호출
+        브라우저가 외부파일을 못읽거나, 읽어오는데 시간이 오래 걸리면 
+        DoCal()은 정의되지 않은 함수입니다 라고 오류 발생
+        */
+        // window.onload = function(){
+        window.onload = () => {
+            //문서 로딩이 끝나면 실행할 코드
+            alert(DoCal());
+        }
+    </script>
+</body>
+</html>
