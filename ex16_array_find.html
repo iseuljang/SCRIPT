@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트의 배열 원소 찾기</title>
+</head>
+<body>
+    <script>
+        //배열 fruit의 바나나가 있는지 확인
+        fruit = ["사과","파인애플","오렌지","바나나","귤","메론"];
+        let target = "바나나";
+        for(let item of fruit){
+            if(item == target){
+                console.log("찾았습니다");
+                break;
+            }
+        }
+        //indexOf() 찾으면 인덱스, 못찾으면 -1
+        if(fruit.indexOf(target) > -1){
+            console.log("찾았습니다");
+        }else{
+            console.log("못 찾았습니다");
+        }
+        //find() -> 찾으면 객체, 못찾으면 undefined
+        if(fruit.find((item) => item === target) == undefined){
+            console.log("못 찾았습니다");
+        }else{
+            console.log("찾았습니다");
+        }
+        //some(함수) -> 만족하는 객체가 하나라도 있으면 true
+        if(fruit.some((item) => item === target) == true){
+            console.log("찾았습니다");
+        }else{
+            console.log("못 찾았습니다");
+        }
+    </script>
+</body>
+</html>

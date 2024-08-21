@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트의 Math 객체</title>
+</head>
+<body>
+    <script>
+        /*
+        random() => 0 이상 1 미만의 실수를 생성
+        특정 범위의 정수를 얻고 싶다
+        주사위 눈 생성하기 1~6
+        random()으로 생성된 실수는 1을 넘지 못하므로
+        일정 숫자를 곱해 충분히 큰 숫자를 생성한 후
+        6으로 나눈 나머지를 구하고 +1을 해주면 된다
+        (random()*1000)%10 + 1
+        */
+        // let dice = (Math.random()*10) % 6 + 1;
+        //Math.floor() :  내림.소수점을 버림
+        let dice = (Math.floor(Math.random()*1000) % 6) + 1;
+        console.log("주사위수:",dice);
+        //반올림
+        console.log(Math.round(1.123));
+        console.log(Math.round(1.987));
+        //올림
+        console.log(Math.ceil(1.123));
+        console.log(Math.ceil(1.987));
+    </script>
+</body>
+</html>
